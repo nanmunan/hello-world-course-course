@@ -1,0 +1,16 @@
+title: hello-world-course
+description: My first repository on GitHub
+template:
+  repo: hello-world-course-template
+  name: hello-world-course
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
